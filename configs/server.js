@@ -4,6 +4,7 @@ import morgan from "morgan";
 import helmet from "helmet";
 import { dbConection } from "./mongo.js";
 import publicationRoutes from "../src/publication/publication.routes.js"
+import commentRoutes from "../src/comment/comment.routes.js"
 
 
 export const middlewares = (app) => {
@@ -15,7 +16,8 @@ export const middlewares = (app) => {
 };
 
 const routes = (app) => {
-    app.use("/programmerBlog/v1/publications",publicationRoutes)
+    app.use("/programmerBlog/v1/publications",publicationRoutes),
+    app.use("/programmerBlog/v1/comments", commentRoutes)
 };
 
 const connectDB = async () => {
