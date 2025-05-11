@@ -35,12 +35,10 @@ export const getPublications = async (req, res) => {
         .sort({ createdAt: -1 }),
     ]);
 
-    
-
     res.status(200).json({
       success: true,
       total,
-      posts: publications
+      posts: publications,
     });
   } catch (error) {
     res.status(500).json({
@@ -54,10 +52,7 @@ export const getPublications = async (req, res) => {
 export const getPublicationsById = async (req, res) => {
   try {
     const { id } = req.params;
-    const publication = await Publication.findById(id)
-      .sort({ createdAt: -1 });
-
-    ;
+    const publication = await Publication.findById(id).sort({ createdAt: -1 });
 
     if (!publication) {
       return res.status(404).json({
@@ -82,9 +77,7 @@ export const getPublicationsById = async (req, res) => {
 export const updatePublication = async (req, res) => {
   try {
     const { id } = req.params;
-    const  data  = req.body;
-
-  
+    const data = req.body;
 
     const updatedPublication = await Publication.findByIdAndUpdate(
       id,
@@ -136,6 +129,68 @@ export const deletePublication = async (req, res) => {
     res.status(500).json({
       success: false,
       msg: "Error deactivating the publication",
+      error: error.message,
+    });
+  }
+};
+
+export const giveLikes = async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    const publication = await Publication.findById(id);
+
+    if (!publication) {
+      return res.status(404).json({
+        success: false,
+        msg: "Publication not found",
+      });
+    }
+
+    publication.likes += 1;
+    await publication.save();
+
+    res.status(200).json({
+      success: true,
+      msg: "Like added",
+      totalLikes: publication.likes,
+      publication,
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      msg: "Error adding like to the publication",
+      error: error.message,
+    });
+  }
+};
+
+export const removelike = async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    const publication = await Publication.findById(id);
+
+    if (!publication) {
+      return res.status(404).json({
+        success: false,
+        msg: "Publication not found",
+      });
+    }
+
+    publication.likes -= 1;
+    await publication.save();
+
+    res.status(200).json({
+      success: true,
+      msg: "Like added",
+      totalLikes: publication.likes,
+      publication,
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      msg: "Error adding like to the publication",
       error: error.message,
     });
   }

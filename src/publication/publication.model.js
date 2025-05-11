@@ -26,9 +26,13 @@ const PublicationSchema = new Schema(
       {
         type: Schema.Types.ObjectId,
         ref: "Comment",
-        autopopulate: {select:'author content',},
+        autopopulate: {select:'author content createdAt',},
       },
     ],
+    likes: {
+      type: Number,
+      default: 0,
+    },
     state: {
       type: Boolean,
       default: true,

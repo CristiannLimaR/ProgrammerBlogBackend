@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { deletePublication, getPublications, getPublicationsById, savePublication, updatePublication } from "./publication.controller.js";
+import { deletePublication, getPublications, getPublicationsById, savePublication, updatePublication, giveLikes, removelike } from "./publication.controller.js";
 import { validateFields } from "../middlewares/validate-fields.js";
 import { check } from "express-validator";
 import { validatePublication } from "../middlewares/validate-publication.js";
@@ -38,5 +38,9 @@ router.delete(
   ],
   deletePublication
 );
+
+router.patch("/like/:id", giveLikes);
+
+router.patch("/removeLike/:id", removelike);
 
 export default router;
