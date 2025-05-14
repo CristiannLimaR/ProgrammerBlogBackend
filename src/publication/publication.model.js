@@ -33,6 +33,10 @@ const PublicationSchema = new Schema(
       type: Number,
       default: 0,
     },
+    image: {
+      type: String,
+      default: ""
+    },
     state: {
       type: Boolean,
       default: true,

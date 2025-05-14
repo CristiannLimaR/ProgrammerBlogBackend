@@ -2,7 +2,7 @@ import { Router } from "express";
 import { check } from "express-validator";
 import { validateFields } from "../middlewares/validate-fields.js";
 import { deleteComment, getCommentsByPost, saveComment, updateComment } from "./comment.controller.js";
-import { isCommentAuthorByName , validateComment, validateCommentExists} from "../middlewares/validate-comment.js";
+import {validateComment, validateCommentExists} from "../middlewares/validate-comment.js";
 
 const router = Router();
 
@@ -21,7 +21,6 @@ router.post("/publication/:postId", validateComment, saveComment);
 router.put(
   "/:id",
   [
-    isCommentAuthorByName,
     check("id", "No es un ID valido").isMongoId(),
     validateCommentExists,
     validateFields,
@@ -32,7 +31,6 @@ router.put(
 router.delete(
   "/:id",
   [
-    isCommentAuthorByName,
     check("id", "No es un ID valido").isMongoId(),
     validateCommentExists,
     validateFields,
