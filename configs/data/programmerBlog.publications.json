@@ -1,0 +1,87 @@
+[{
+  "_id": {
+    "$oid": "682732acc461b0b75d22529e"
+  },
+  "title": "Hola",
+  "course": "Tech",
+  "content": "Primera Publicacion",
+  "author": "Cristian Lima",
+  "comments": [
+    {
+      "$oid": "682734b6c461b0b75d2252b0"
+    },
+    {
+      "$oid": "68273506c461b0b75d2252c9"
+    }
+  ],
+  "likes": 1,
+  "image": "",
+  "state": true,
+  "createdAt": {
+    "$date": "2025-05-16T12:42:20.974Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-16T12:52:22.307Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6827334cc461b0b75d2252a0"
+  },
+  "title": "APIs con Node.js",
+  "course": "Workshop",
+  "content": "En Taller  construimos una APIs RESTful con Express, conectándola a una base de datos y aplicando buenas prácticas.",
+  "author": "Cristian Lima",
+  "comments": [
+    {
+      "$oid": "6827351cc461b0b75d2252ce"
+    }
+  ],
+  "likes": 2,
+  "image": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg",
+  "state": true,
+  "createdAt": {
+    "$date": "2025-05-16T12:45:00.011Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-16T12:52:44.556Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6827342cc461b0b75d2252a2"
+  },
+  "title": "Almacenadora",
+  "course": "Practice",
+  "content": "En la semana 6 entregamos el proyecto de la almacenadora",
+  "author": "Cristian Lima",
+  "comments": [],
+  "likes": 0,
+  "image": "",
+  "state": true,
+  "createdAt": {
+    "$date": "2025-05-16T12:48:44.549Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-16T12:50:28.237Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6827357dc461b0b75d2252d2"
+  },
+  "title": "React",
+  "course": "Tech",
+  "content": "Durante el bimestre aprendimos ReactJS, profundizando en hooks, componentes funcionales y manejo de estados.",
+  "author": "Cristian Lima",
+  "comments": [],
+  "likes": 1,
+  "image": "https://willdom.com/wp-content/uploads/2023/07/logo-react-js.png",
+  "state": true,
+  "createdAt": {
+    "$date": "2025-05-16T12:54:21.146Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-16T12:54:53.065Z"
+  }
+}]

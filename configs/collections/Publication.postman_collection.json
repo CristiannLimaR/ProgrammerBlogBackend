@@ -1,0 +1,142 @@
+{
+	"info": {
+		"_postman_id": "bc316863-b618-448d-9049-7918a67a9e2c",
+		"name": "Publication",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42149033"
+	},
+	"item": [
+		{
+			"name": "getPublications",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/programmerBlog/v1/publications",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"programmerBlog",
+						"v1",
+						"publications"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addPublication",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Hola\",\r\n    \"content\": \"Primera publicacion\",\r\n    \"category\": \"Tech\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/programmerBlog/v1/publications",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"programmerBlog",
+						"v1",
+						"publications"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updatePublication",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Almacenadora\",\r\n    \"category\": \"Workshop\",\r\n    \"content\": \"En la semana 6 entregamos el proyecto de Almacenadora en el cual implementamos el stack MERN\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/programmerBlog/v1/publications/681f8a88ada47dee5b785c29",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"programmerBlog",
+						"v1",
+						"publications",
+						"681f8a88ada47dee5b785c29"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deletePublication",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2I2MmYxYWUzZjFkZDgyZWFjNzQ3MWIiLCJpYXQiOjE3NDAyNzA5ODksImV4cCI6MTc0MDI3NDU4OX0.fm5Au7MwVaZUdmDpeJWn4uoePMOYBZ98cWig_kAecYo",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/programmerBlog/v1/publications/67ba5f095de003a229e78e75",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"programmerBlog",
+						"v1",
+						"publications",
+						"67ba5f095de003a229e78e75"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findPublication",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/programerBlog/v1/publications/67ba5b1d4e93205a2a0d1073",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"programerBlog",
+						"v1",
+						"publications",
+						"67ba5b1d4e93205a2a0d1073"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

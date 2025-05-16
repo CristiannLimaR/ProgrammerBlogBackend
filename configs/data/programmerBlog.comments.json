@@ -1,0 +1,51 @@
+[{
+  "_id": {
+    "$oid": "682734b6c461b0b75d2252b0"
+  },
+  "content": "Hola",
+  "author": "Anónimo",
+  "publication": {
+    "$oid": "682732acc461b0b75d22529e"
+  },
+  "state": true,
+  "createdAt": {
+    "$date": "2025-05-16T12:51:02.300Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-16T12:51:02.300Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68273506c461b0b75d2252c9"
+  },
+  "content": "👍",
+  "author": "Cristian",
+  "publication": {
+    "$oid": "682732acc461b0b75d22529e"
+  },
+  "state": true,
+  "createdAt": {
+    "$date": "2025-05-16T12:52:22.252Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-16T12:52:22.252Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6827351cc461b0b75d2252ce"
+  },
+  "content": "Muy interesante\n",
+  "author": "Anónimo",
+  "publication": {
+    "$oid": "6827334cc461b0b75d2252a0"
+  },
+  "state": true,
+  "createdAt": {
+    "$date": "2025-05-16T12:52:44.519Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-16T12:52:44.519Z"
+  }
+}]
